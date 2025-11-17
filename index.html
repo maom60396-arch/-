@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موسوعة حديث عدي بن حاتم الطائي - ديناميكية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    margin:0;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  h1 { text-align: center; margin: 30px 0; font-size: 36px; color:#ffd700; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);}
+  .search-input {width: 90%; padding: 12px; margin: 20px auto; display:block; border-radius:10px; border:none; font-size:18px; outline:none;}
+  body::before {
+    content:"";
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=20') no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.45);
+    z-index: -1;
+    transition: background 2s ease-in-out;
+  }
+  .container {display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;}
+  .box {background: rgba(0,0,0,0.6); border-radius:15px; padding:20px; width: 300px; transition: transform 0.3s ease, box-shadow 0.3s ease;}
+  .box:hover {transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.7);}
+  .toggle-header {display:flex; justify-content: space-between; cursor:pointer; font-weight:bold; margin-top: 15px; padding: 5px 0; transition: color 0.3s ease;}
+  .toggle-header span {background:#ffd700; color:#000; padding:5px 10px; border-radius:50%; transition: transform 0.3s;}
+  .toggle-header:hover span {transform: scale(1.3);}
+  .toggle-content {max-height:0; overflow:hidden; margin-top:5px; padding:0 10px; background: rgba(0,0,0,0.35); border-radius:10px; transition: max-height 0.5s ease, padding 0.5s ease;}
+  .toggle-content.open {padding:10px;}
+  .toggle-content p {margin:6px 0; line-height:1.6;}
+</style>
+</head>
+<body>
+
+<h1>موسوعة حديث عدي بن حاتم الطائي</h1>
+<input type="text" id="searchInput" class="search-input" placeholder="ابحث في الموسوعة...">
+
+<div class="container">
+
+  <!-- الخانة 1: النص الكامل -->
+  <div class="box">
+    <h2>النص الكامل للحديث</h2>
+    <p>عن عدي بن حاتم الطائي، قال: أتيت النبي ﷺ وفي عنقي صليب من ذهب. فقال: «يا عدي اِطرَح عنك هذا الوثن». فسمعته يقرأ في سورة التوبة: ﴿اتَّخَذُوا أَحْبَارَهُمْ وَرُهْبَانَهُمْ أَرْبَابًا مِنْ دُونِ اللَّهِ﴾. فقلت: «يا رسول الله، إنهم لم يعبدوهُمْ» فقال: «أجل، ولكن إذا حلُّوا لهم ما حرَّم الله استحلُّوه، وإذا حَرَّموا عليهم ما أحلَّ الله تحرَّموا، فذلك عبادتهم لهم». </p>
+  </div>
+
+  <!-- الخانة 2: الشرح -->
+  <div class="box">
+    <h2>شرح الحديث</h2>
+    <p>النبي ﷺ يبين أن الربوبية هنا ليست عبادة تماثيل، وإنما طاعة تحريمية وتشريعية: يُحلُّ لهم ما حرم الله، ويحرّمونه عندما يقررون، فتصبح طاعتهم عبادتهم.</p>
+    <p>الأشخاص “أرباب” بمعنى التشريع والتحكم الشرعي، لا بمعنى الألوهية.</p>
+    <p>وفقًا لتفسير القرآن والحديث، المعنى هو طاعة التشريع وليس عبادة.</p>
+  </div>
+
+  <!-- الخانة 3: طرق الحديث والروات -->
+  <div class="box">
+    <h2>طرق الحديث والروات</h2>
+    <div class="toggle-header" onclick="toggleContent(this)">طريق الترمذي <span>+</span></div>
+    <div class="toggle-content">
+      <div class="toggle-header" onclick="toggleContent(this)">عبد السلام بن حرب <span>+</span></div>
+      <div class="toggle-content">
+        <p>📜 الجرح والتعديل: ثقة</p>
+        <p>💡 دوره: راوٍ في طريق الترمذي عن غطيف بن أعين.</p>
+        <p>🏅 درجة الحديث: حسن</p>
+      </div>
+      <div class="toggle-header" onclick="toggleContent(this)">غطيف بن أعين <span>+</span></div>
+      <div class="toggle-content">
+        <p>📜 الجرح والتعديل: ثقة</p>
+        <p>💡 دوره: راوٍ عن مصعب بن سعد</p>
+        <p>🏅 درجة الحديث: حسن</p>
+      </div>
+      <div class="toggle-header" onclick="toggleContent(this)">مصعب بن سعد <span>+</span></div>
+      <div class="toggle-content">
+        <p>📜 الجرح والتعديل: صحابي، ثقة</p>
+        <p>💡 دوره: ناقل عن عدي بن حاتم</p>
+        <p>🏅 درجة الحديث: حسن</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- الخانة 4: العلل والمصادر -->
+  <div class="box">
+    <h2>العلل والمصادر والمكتبات</h2>
+    <div class="toggle-header" onclick="toggleContent(this)">حكم الحديث <span>+</span></div>
+    <div class="toggle-content">
+      <p>الحديث حسن حسب الدرر السنية.</p>
+      <p>الترمذي وصف الحديث بالغريب.</p>
+    </div>
+    <div class="toggle-header" onclick="toggleContent(this)">مراجع حديثية وتفسيرية <span>+</span></div>
+    <div class="toggle-content">
+      <p>- سنن الترمذي – حديث رقم 3095</p>
+      <p>- السنن الكبير للبيهقي</p>
+      <p>- تفسير القرآن (إسلام ويب) لآية التوبة 31</p>
+      <p>- التخريج من المكتبة الشاملة لدراسة الأسانيد</p>
+    </div>
+    <div class="toggle-header" onclick="toggleContent(this)">روابط مكتبات حديثية رقمية <span>+</span></div>
+    <div class="toggle-content">
+      <p>📚 <a href="http://www.shamela.ws" target="_blank" style="color:#ffd700;">المكتبة الشاملة (Shamela)</a></p>
+      <p>📚 <a href="https://islamport.com/l/mtn/mtn.htm" target="_blank" style="color:#ffd700;">موسوعة المتون الحديثية (IslamPort)</a></p>
+      <p>📚 <a href="https://quranislam.github.io/hadith/tirmizi3095.html" target="_blank" style="color:#ffd700;">سنن الترمذي – حديث 3095</a></p>
+      <p>📚 <a href="https://www.noor-book.com/%D9%83%D8%AA%D8%A7%D8%A8-%D8%B3%D9%86%D9%86-%D8%A7%D9%84%D8%AA%D8%B1%D9%85%D8%B0%D9%8A-%D8%A7%D9%84%D8%A7%D9%85%D8%A7%D9%85-%D8%A7%D9%84%D8%AA%D8%B1%D9%85%D8%B0%D9%8A-pdf" target="_blank" style="color:#ffd700;">تحميل سنن الترمذي PDF</a></p>
+      <p>📚 <a href="https://www.muslim-library.com/dl/books/Arabic-al-qawl-al-musaddad-fa-al-dhabb-an-al-musnad-li-ahmad.pdf" target="_blank" style="color:#ffd700;">القول المسدد – زوائد مسند أحمد</a></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleContent(el){
+  const content = el.nextElementSibling;
+  const sign = el.querySelector('span');
+  if(content.classList.contains("open")){
+    content.classList.remove("open");
+    content.style.maxHeight = null;
+    sign.textContent = "+";
+  } else {
+    content.classList.add("open");
+    content.style.maxHeight = content.scrollHeight + "px";
+    sign.textContent = "-";
+  }
+}
+
+// بحث داخلي
+document.getElementById('searchInput').addEventListener('input', function(){
+  const filter = this.value.toLowerCase();
+  document.querySelectorAll('.box').forEach(box => {
+    box.style.display = box.textContent.toLowerCase().includes(filter) ? '' : 'none';
+  });
+});
+
+// تغيير الخلفيات ديناميكياً
+const backgrounds = [
+  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=20',
+  'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=20',
+  'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=20'
+];
+let bgIndex = 0;
+setInterval(() => {
+  document.body.style.setProperty('--bg', `url(${backgrounds[bgIndex]})`);
+  document.body.querySelector('::before');
+  document.querySelector('body::before');
+  document.body.style.backgroundImage = `url(${backgrounds[bgIndex]})`;
+  bgIndex = (bgIndex +1) % backgrounds.length;
+}, 10000);
+</script>
+
+</body>
+</html>
